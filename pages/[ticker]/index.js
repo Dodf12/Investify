@@ -24,7 +24,7 @@ export async function getStaticProps({ params }) {
 	const { ticker } = params;
 
 	try {
-		const res = await fetch('http://localhost:3000/api/fetch-data');
+		const res = await fetch('https://investify-ebon.vercel.app/api/fetch-data');
 		const apiData = await res.json();
 
 		if (!apiData.success || !apiData.data) {

@@ -2,23 +2,21 @@ import { MongoClient } from "mongodb";
 
 const { MongoClient } = require('mongodb');
 
-// Replace with your MongoDB connection string
-const uri = "mongodb://localhost:27017"; // Example for local MongoDB
+const uri = "mongodb://localhost:27017";
+// FIXME: https://investify-ebon.vercel.app/
+
 const dbName = "hackathon";
-const collectionName = "stock_data"; // Name of the collection to query
+const collectionName = "stock_data";
 
 async function fetchDocumentByTicker(ticker) {
     const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
     
     try {
-        await client.connect();  // Connect to the MongoDB server
+        await client.connect();
+        
         const database = client.db("hackathon");
         const collection = database.collection("stock_data");
-        
-        // Query to find the document by ticker
         const query = { ticker: ticker };
-
-        // Fetch a single document
         const document = await collection.findOne(query);
 
         if (document) {
