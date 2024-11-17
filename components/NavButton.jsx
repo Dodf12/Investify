@@ -14,14 +14,14 @@ export default function NavButton({text, redirect_uri, isCurrentPage}) {
         }
     };
 
-    return(
+    return (
         <button onClick={handleClick}>
             {isCurrentPage ? (
-                <div className={"p-2 hover:underline hover:text-black transition-colors duration-500"}>
+                <div className={"p-2 hover:underline text-white hover:text-white-500 transition-colors duration-500"}>
                     {text}
                 </div>
             ) : (
-                <div className={"p-2 hover:underline hover:text-black transition-colors duration-500"}>
+                <div className={"p-2 hover:underline text-white hover:text-white-500 transition-colors duration-500"}>
                     {text}
                 </div>
             )}
