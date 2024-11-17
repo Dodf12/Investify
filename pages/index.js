@@ -48,13 +48,13 @@ export default function Home() {
 		fetchData();
 	}, []);
 
-	if (loading) return <p>Loading .. </p>;
+	if (loading) return <p className="bg-white-300 h-screen text-center">Loading .. </p>;
 	if (error) return <p>Error: {error} </p>;
 
   return (
 	<div style={{ backgroundColor: '#534d42', color: 'white'}}>
 		<title>Investify - Home</title>
-		<h1>{data?.ticker || "no ticker"}</h1>
+		<h1>{data?.ticker}</h1>
 		<Header currentPage={'home'}/>
 		<Title/>
 		{/* Pass tickers to SearchBar */}
