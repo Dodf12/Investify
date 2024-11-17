@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 
 export default function NavButton({text, redirect_uri, isCurrentPage}) {
 
-    // Mihir: this is the next js router that will push users to the relevent page
+    // Mihir: Next.js router that will push users to relevent page.
     const router = useRouter();
 
     // void function to handle click, redirects the user to the correct page
@@ -17,11 +17,17 @@ export default function NavButton({text, redirect_uri, isCurrentPage}) {
     return (
         <button onClick={handleClick}>
             {isCurrentPage ? (
-                <div className={"p-2 hover:underline text-white hover:text-white-500 transition-colors duration-500"}>
+                <div className={"p-2"}
+                    style={{ color: "white" }}
+                    onMouseEnter={(e) => (e.target.style.color = "#dcc679")}
+                    onMouseLeave={(e) => (e.target.style.color = "white")}>
                     {text}
                 </div>
             ) : (
-                <div className={"p-2 hover:underline text-white hover:text-white-500 transition-colors duration-500"}>
+                <div className={"p-2"}
+                    style={{ color: "white" }}
+                    onMouseEnter={(e) => (e.target.style.color = "#dcc679")}
+                    onMouseLeave={(e) => (e.target.style.color = "white")}>
                     {text}
                 </div>
             )}
