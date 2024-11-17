@@ -1,9 +1,6 @@
 import { MongoClient } from "mongodb";
 
-const { MongoClient } = require('mongodb');
-
-const uri = "mongodb://localhost:27017";
-// FIXME: https://investify-ebon.vercel.app/
+connection_string = 'mongodb+srv://mihirvgajjar04:dEse1sgiFROrEdB0@cluster0.tzwuf.mongodb.net/?retryWrites=true&w=majority&tlsAllowInvalidCertificates=true'
 
 const dbName = "hackathon";
 const collectionName = "stock_data";
@@ -13,7 +10,7 @@ async function fetchDocumentByTicker(ticker) {
     
     try {
         await client.connect();
-        
+
         const database = client.db("hackathon");
         const collection = database.collection("stock_data");
         const query = { ticker: ticker };
