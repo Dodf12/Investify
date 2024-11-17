@@ -4,7 +4,6 @@ import NavButton from "@/components/NavButton";
 import Image from "next/image";
 
 export default function Header({currentPage}) {
-
     const isHome = (currentPage == 'home');
     const isAbout = (currentPage == 'about');
 

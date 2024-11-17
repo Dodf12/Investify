@@ -7,7 +7,7 @@ export default function NavButton({text, redirect_uri, isCurrentPage}) {
     // Mihir: Next.js router that will push users to relevent page.
     const router = useRouter();
 
-    // void function to handle click, redirects the user to the correct page
+    // Mihir: Void function to handle click, redirects user to correct page.
     const handleClick = () => {
         if (redirect_uri) {
             router.push(redirect_uri);
@@ -18,17 +18,17 @@ export default function NavButton({text, redirect_uri, isCurrentPage}) {
         <button onClick={handleClick}>
             {isCurrentPage ? (
                 <div className={"p-2"}
-                    style={{ color: "white" }}
-                    onMouseEnter={(e) => (e.target.style.color = "#dcc679")}
-                    onMouseLeave={(e) => (e.target.style.color = "white")}>
-                    {text}
+                     style={{ color: "white" }}
+                     onMouseEnter={(e) => (e.target.style.color = "#dcc679")}
+                     onMouseLeave={(e) => (e.target.style.color = "white")}>
+                     {text}
                 </div>
             ) : (
                 <div className={"p-2"}
-                    style={{ color: "white" }}
-                    onMouseEnter={(e) => (e.target.style.color = "#dcc679")}
-                    onMouseLeave={(e) => (e.target.style.color = "white")}>
-                    {text}
+                     style={{ color: "white" }}
+                     onMouseEnter={(e) => (e.target.style.color = "#dcc679")}
+                     onMouseLeave={(e) => (e.target.style.color = "white")}>
+                     {text}
                 </div>
             )}
         </button>

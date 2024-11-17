@@ -7,10 +7,14 @@ export default function About() {
     return (
         <div className="h-screen bg-[#534d42] text-white">
             <title>Investify - About</title>
+
             <Header currentPage={'about'}/>
+
             <div className="hero h-screen"
                 style={{backgroundImage: "url(https://wallpapers.com/images/hd/stock-market-background-wdb83di320cjbktg.jpg)"}}>
+
                 <div className="hero-overlay bg-opacity-60" />
+                
                 <div className="hero-content text-center">
                     <div className="max-w-2xl -translate-y-10">
                         <h1 className="text-white mb-5 text-6xl font-bold">What is Investify?</h1>

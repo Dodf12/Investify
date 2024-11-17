@@ -10,9 +10,11 @@ export default function Home() {
   return (
 	<div style={{ backgroundColor: '#534d42', color: 'white'}}>
 		<title>Investify - Home</title>
+
 		<Header currentPage={'home'}/>
 		<Title/>
 		<SearchBar/>
+		
 		<CardInformation/>
 	</div>
   );

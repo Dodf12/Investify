@@ -5,6 +5,7 @@ export default function CardInformation() {
     return (
         <div className="min-h-screen pb-10" style={{ backgroundColor: '#272624', color: 'white'}}>
             <MeetDevHeader text="Meet the Developers"/>
+            
             <div className="flex justify-between gap-10 items-start flex-wrap w-full max-w-6xl mx-auto">
                 <Card name={"Kaiwen Du"}
                       role={"Frontend Developer"}
